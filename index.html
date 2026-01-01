@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>Saudi Airlines</title>
 
-    <!-- CSS DISABLED FOR ACCESSIBILITY TESTING -->
-    <!--
     <style>
         body {
             margin: 0;
@@ -27,7 +25,7 @@
         }
 
         .logo {
-            width: 140px;
+            width: 140px;   /* 👈 حجم مناسب */
             margin-bottom: 10px;
         }
 
@@ -101,14 +99,13 @@
             color: #666;
         }
     </style>
-    -->
 </head>
 
 <body>
 
 <!-- 🔐 LOGIN PAGE -->
-<div id="loginPage">
-    <img src="logo.png" alt="Saudi Airlines Logo">
+<div class="card section" id="loginPage" style="display:block;">
+    <img src="logo.png" class="logo" alt="Saudi Airlines Logo">
 
     <h1>Saudi Airlines</h1>
     <h2>User Login</h2>
@@ -121,17 +118,15 @@
 
     <button onclick="goHome()">Login</button>
 
-    <p>
+    <div class="links">
         <a onclick="alert('Forgot Password clicked')">Forgot Password?</a> |
         <a onclick="goHome()">Go to Home</a>
-    </p>
+    </div>
 </div>
 
-<hr>
-
 <!-- 🏠 HOME PAGE -->
-<div id="homePage" style="display:none;">
-    <img src="logo.png" alt="Saudi Airlines Logo">
+<div class="card section" id="homePage">
+    <img src="logo.png" class="logo" alt="Saudi Airlines Logo">
 
     <h1>Search Flights</h1>
 
@@ -146,24 +141,26 @@
 
     <button>Search Flights</button>
 
-    <h3>Special Offers</h3>
-    <p>Enjoy exclusive fares on domestic and international destinations.</p>
-    <p><strong>Contact:</strong> support@saudiairlines.com | +966 800 123 456</p>
+    <div class="offers">
+        <h3>Special Offers</h3>
+        <p>Enjoy exclusive fares on domestic and international destinations.</p>
+        <p><strong>Contact:</strong> support@saudiairlines.com | +966 800 123 456</p>
 
-    <ul>
-        <li>Twitter</li>
-        <li>Facebook</li>
-        <li>Instagram</li>
-    </ul>
+        <ul>
+            <li>Twitter</li>
+            <li>Facebook</li>
+            <li>Instagram</li>
+        </ul>
+    </div>
 
-    <p>
-        <a onclick="goLogin()">Back to Login</a>
-    </p>
+    <div class="links">
+        <a onclick="goLogin()">← Back to Login</a>
+    </div>
 
-    <footer>
+    <div class="footer">
         © 2025 Saudi Airlines <br>
         Accessibility Statement
-    </footer>
+    </div>
 </div>
 
 <script>
